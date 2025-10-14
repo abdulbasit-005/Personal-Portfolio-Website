@@ -1,6 +1,51 @@
 export const projectsData = [
   {
     id: 1,
+    name: "Docs-now",
+    description:
+      "An AI-powered SaaS application that enables intelligent conversations with PDF documents. Built with Next.js 15, TypeScript, and advanced AI technologies including OpenAI, LangChain, and Pinecone vector database. Features include real-time streaming responses, semantic search, secure authentication via Kinde, subscription management with Stripe, and a comprehensive dashboard for document management. The application uses tRPC for type-safe APIs, Prisma for database management, and UploadThing for seamless file uploads.",
+    tools: [
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "tRPC",
+      "Prisma",
+      "TanStack Query",
+      "React Hook Form",
+      "Zod",
+      "OpenAI",
+      "Pinecone",
+      "Kinde Auth",
+      "UploadThing",
+      "Stripe",
+    ],
+    role: "Full-stack Developer",
+    code: "",
+    demo: "https://docs-now.vercel.app",
+    date: "2025-10-14",
+    images: [
+      "/projects/docs-now/docs-now-landing.png",
+      "/projects/docs-now/Docs-now.png",
+      "/projects/docs-now/docs-now-chat.jpg",
+    ],
+    videos: [""],
+    highlights: [
+      "Implemented AI-powered chat using OpenAI GPT with streaming responses for real-time interactions. ",
+      "Integrated vector-based semantic search using Pinecone for accurate document understanding. ",
+      "Built type-safe end-to-end APIs with tRPC for enhanced developer experience. ",
+      "Designed subscription system with Stripe integration supporting Free and Pro plans. ",
+      "Developed comprehensive dashboard with PDF viewer and chat history management.",
+    ],
+    challenges: [
+      "Implementing efficient vector embeddings and semantic search across large PDF documents.",
+      "Managing real-time streaming responses while maintaining context accuracy.",
+      "Integrating multiple third-party services (OpenAI, Pinecone, Stripe, Kinde) seamlessly.",
+      "Optimizing database queries and state management for handling multiple concurrent chats.",
+    ],
+  },
+  {
+    id: 2,
     name: "Issue Tracker",
     description:
       "A comprehensive full-stack issue tracking application developed with Next.js 15, TypeScript, and Prisma/MySQL. Features include Google OAuth authentication via NextAuth, dynamic dashboards with chart visualizations, advanced filtering, pagination, and complete CRUD operations. Tailwind CSS and Radix UI were utilized for a responsive and accessible UI, while React Query ensured efficient data fetching and state management.",
@@ -17,6 +62,7 @@ export const projectsData = [
     role: "Full-stack Developer",
     code: "https://github.com/Ghost-oo5/issue-tracker",
     demo: "https://issuetracker005.vercel.app/",
+    date: "",
     images: [
       "/projects/issue-tracker/issue-tracker.png",
       "/projects/issue-tracker/dashboard.png",
@@ -34,7 +80,7 @@ export const projectsData = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     name: "GameHub",
     description:
       "A dynamic game discovery platform built with React.js, integrating the RAWG API to fetch and display popular games. Features include search functionality, genre-based filtering, infinite scrolling, and a responsive design achieved with Tailwind CSS and Chakra UI. React Query and Axios were employed for efficient data fetching.",
@@ -50,6 +96,7 @@ export const projectsData = [
     role: "Frontend Developer",
     code: "https://github.com/Ghost-oo5/game-hub",
     demo: "https://gamehub-new.vercel.app/",
+    date: "",
     images: ["/projects/gamehub/gamehub.png"],
     videos: [""],
     highlights: [
@@ -63,7 +110,7 @@ export const projectsData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: "AI Image Generator",
     description:
       "An AI-powered image generation and editing tool featuring prompt enhancement and a feedback loop. The backend is developed with FastAPI using the Google GenAI Python SDK, while the Full-Stack is built with Next.js and React. Additional tools like Pydantic, Pillow, and n8n were integrated to handle data validation, image processing, and workflow automation.",
@@ -80,6 +127,7 @@ export const projectsData = [
     role: "Full-stack Developer",
     code: "https://github.com/Ghost-oo5/Google-flash2.0-exp-image-server",
     demo: "https://automation.alphabase.co/agents/image-generator/generate-image",
+    date: "",
     images: ["/placeholder/placeholder.png"],
     videos: ["/projects/AI-image-generator/AI-image-generator.mp4"],
     highlights: [
@@ -93,7 +141,7 @@ export const projectsData = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: "JUHUU Marketplace",
     description:
       "A marketplace website developed for JUHUU’s IoT-based platform, showcasing a range of services and products. Built with React.js and styled using Tailwind CSS, the site offers a clean and responsive user interface.",
@@ -101,6 +149,7 @@ export const projectsData = [
     role: "Full-Stack Developer",
     code: "https://github.com/Ghost-oo5/marketplace-juhuu-app",
     demo: "https://marketplace-juhuu-app.vercel.app/",
+    date: "",
     images: ["/projects/juhuu/marketplace-juhuu.png"],
     videos: [""],
     highlights: [
@@ -113,7 +162,7 @@ export const projectsData = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     name: "JUHUU BikeBox Website",
     description:
       "A promotional website for JUHUU’s BikeBox product, offering secure bike storage solutions. Developed using HTML, CSS, and JavaScript, the site delivers essential product information and contact options.",
@@ -121,6 +170,7 @@ export const projectsData = [
     role: "Frontend Developer",
     code: "https://github.com/Ghost-oo5/Juhoo",
     demo: "https://juhoo.vercel.app/",
+    date: "",
     images: ["/projects/juhuu/juhoo.png"],
     videos: [""],
     highlights: [
@@ -133,7 +183,7 @@ export const projectsData = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     name: "Rentistan",
     description:
       "A React Native rental management app designed to facilitate communication between tenants and property managers. Features include property listings, messaging, and user authentication, all backed by Firebase services. Expo and React Navigation were utilized for streamlined development and navigation.",
@@ -147,6 +197,7 @@ export const projectsData = [
     role: "Full-stack Mobile Developer",
     code: "https://github.com/Ghost-oo5/Rentistan--A-Rental-App-in-React-Native-via-Expo",
     demo: "",
+    date: "",
     images: ["/placeholder/placeholder.png"],
     videos: [""],
     highlights: [
@@ -159,7 +210,7 @@ export const projectsData = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     name: "Notion Table Clone",
     description:
       "A Notion-style editable task table featuring drag-and-drop functionality for columns and rows, tag inputs, persistent localStorage, and dark mode support. Built with React, TypeScript, and Vite, and styled using Chakra UI.",
@@ -174,6 +225,7 @@ export const projectsData = [
     role: "Frontend Developer",
     code: "https://github.com/Ghost-oo5/Notion-Table-Clone",
     demo: "https://task-table-zeta.vercel.app/",
+    date: "",
     images: ["/projects/tasktable/task-table.png"],
     videos: [""],
     highlights: [
