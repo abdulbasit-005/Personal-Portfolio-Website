@@ -8,23 +8,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ProjectCardProps } from "@/Types/types";
-import {
-  Code,
-  Globe,
-  Sparkles,
-  ChevronDown,
-  ChevronUp,
-  ExternalLink,
-} from "lucide-react";
+import { ChevronUp, Code, ExternalLink, Globe, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useRef, MouseEvent } from "react";
+import { MouseEvent, useRef, useState } from "react";
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   const firstImage = project.images?.[0];
   const [showAllTags, setShowAllTags] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
   const maxVisibleTags = 5;
@@ -62,8 +54,6 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     <div
       ref={cardRef}
       onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       className="group relative h-full"
     >
       {/* Spotlight Effect */}

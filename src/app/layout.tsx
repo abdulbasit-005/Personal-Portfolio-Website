@@ -16,9 +16,45 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio of abdul basit - Software Developer",
+  title: "Abdul Basit | Full Stack Developer & AI Automation Expert",
   description:
-    "This is the portfolio of abdul basit. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
+    "Explore the portfolio of Abdul Basit, a Professional Full Stack Developer specializing in Next.js, AI Automation, and modern web solutions. Built for performance and user experience.",
+  keywords: [
+    "Abdul Basit",
+    "Full Stack Developer",
+    "Next.js Portfolio",
+    "AI Automation",
+    "Software Engineer",
+    "React Developer",
+  ],
+  authors: [{ name: "Abdul Basit" }],
+  openGraph: {
+    title: "Abdul Basit | Personal Portfolio",
+    description:
+      "Full Stack Developer & AI Automation Expert — Building the future of the web.",
+    url: "https://abdulbasit-005.vercel.app",
+    siteName: "Abdul Basit Portfolio",
+    images: [
+      {
+        url: "/Website-overview.png",
+        width: 1200,
+        height: 630,
+        alt: "Abdul Basit Portfolio Overview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abdul Basit | Full Stack Developer",
+    description: "Building modern web applications and AI automations.",
+    images: ["/Website-overview.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
