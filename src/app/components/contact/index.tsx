@@ -12,7 +12,7 @@ import { MapPin, Send, MessageSquare } from "lucide-react";
 
 interface ContactLinkProps {
   href: string;
-  icon: any;
+  icon: React.ElementType;
   label: string;
   value: string;
   color: string;
