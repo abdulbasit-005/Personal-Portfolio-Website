@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
 import { toast } from "react-toastify";
 import { isValidEmail } from "@/../utils/check-email";
+import { User, Mail, MessageSquare } from "lucide-react";
 
 const ContactWithoutCaptcha = () => {
   const [input, setInput] = useState({
@@ -74,23 +75,30 @@ const ContactWithoutCaptcha = () => {
       }
     }
   };
+
   return (
-    <div className="">
-      <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
-        Contact with me
-      </p>
-      <div className="max-w-3xl text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
-        <p className="text-base text-[#d3d8e8]">
-          {
-            "If you have any questions or concerns, please don't hesitate to contact me. I am open to any work opportunities that align with my skills and interests."
-          }
-        </p>
-        <div className="mt-6 flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
-            <label className="text-base">Your Name: </label>
+    <div className="relative group p-8 lg:p-10 rounded-3xl border border-white/5 bg-white/[0.02] backdrop-blur-3xl shadow-2xl">
+      <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-2">
+          <h3 className="text-2xl font-bold text-white tracking-tight">
+            Send a Message
+          </h3>
+          <p className="text-slate-400 text-sm">
+            I'll get back to you within 24 hours.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          {/* Name Field */}
+          <div className="flex flex-col gap-2 group/input">
+            <label className="text-sm font-bold text-slate-500 uppercase tracking-widest ml-1 flex items-center gap-2 group-focus-within/input:text-[#16f2b3] transition-colors">
+              <User className="w-4 h-4" />
+              Your Name
+            </label>
             <input
-              className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
+              className="bg-white/5 w-full border border-white/10 rounded-2xl focus:border-[#16f2b3]/50 focus:bg-white/10 ring-0 outline-0 transition-all duration-300 px-5 py-4 text-white placeholder:text-slate-600"
               type="text"
+              placeholder="John Doe"
               maxLength={100}
               required={true}
               onChange={(e) => setInput({ ...input, name: e.target.value })}
@@ -99,11 +107,16 @@ const ContactWithoutCaptcha = () => {
             />
           </div>
 
-          <div className="flex flex-col gap-2">
-            <label className="text-base">Your Email: </label>
+          {/* Email Field */}
+          <div className="flex flex-col gap-2 group/input">
+            <label className="text-sm font-bold text-slate-500 uppercase tracking-widest ml-1 flex items-center gap-2 group-focus-within/input:text-[#16f2b3] transition-colors">
+              <Mail className="w-4 h-4" />
+              Your Email
+            </label>
             <input
-              className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
+              className={`bg-white/5 w-full border rounded-2xl focus:bg-white/10 ring-0 outline-0 transition-all duration-300 px-5 py-4 text-white placeholder:text-slate-600 ${error.email ? "border-red-500/50" : "border-white/10 focus:border-[#16f2b3]/50"}`}
               type="email"
+              placeholder="john@example.com"
               maxLength={100}
               required={true}
               value={input.email}
@@ -114,16 +127,21 @@ const ContactWithoutCaptcha = () => {
               }}
             />
             {error.email && (
-              <p className="text-base text-red-400">
-                Please provide a valid email!
+              <p className="text-xs text-red-400 ml-1">
+                Please provide a valid email address.
               </p>
             )}
           </div>
 
-          <div className="flex flex-col gap-2">
-            <label className="text-base">Your Message: </label>
+          {/* Message Field */}
+          <div className="flex flex-col gap-2 group/input">
+            <label className="text-sm font-bold text-slate-500 uppercase tracking-widest ml-1 flex items-center gap-2 group-focus-within/input:text-[#16f2b3] transition-colors">
+              <MessageSquare className="w-4 h-4" />
+              Your Message
+            </label>
             <textarea
-              className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
+              className="bg-white/5 w-full border border-white/10 rounded-2xl focus:border-[#16f2b3]/50 focus:bg-white/10 ring-0 outline-0 transition-all duration-300 px-5 py-4 text-white placeholder:text-slate-600 resize-none"
+              placeholder="Tell me about your project..."
               maxLength={500}
               name="message"
               required={true}
@@ -133,34 +151,38 @@ const ContactWithoutCaptcha = () => {
               value={input.message}
             />
           </div>
-          <div className="flex flex-col items-center gap-2">
+
+          <div className="flex flex-col gap-4 mt-2">
             {error.required && (
-              <p className="text-base text-red-400">
-                Email and Message are required!
+              <p className="text-sm text-red-400 text-center font-medium">
+                Oops! Looks like some fields are still empty.
               </p>
             )}
+
             <button
-              className="custom-contact-link"
-              role="button"
+              className="relative group/btn overflow-hidden rounded-2xl bg-gradient-to-r from-[#16f2b3] to-violet-600 p-[1px] transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50"
               onClick={handleSendMail}
+              disabled={isLoading}
             >
-              <span>
+              <div className="relative flex items-center justify-center gap-2 bg-[#0d1224] group-hover/btn:bg-transparent transition-all rounded-[15px] px-8 py-4 text-white font-bold uppercase tracking-widest text-sm">
                 {isLoading ? (
-                  <div
-                    className="inline-block h-5 w-5 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
-                    role="status"
-                  ></div>
+                  <div className="h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
                 ) : (
-                  <div className="custom-animated-button btn-blue flex items-center gap-2 !rounded-full ">
-                    send message <TbMailForward className="ml-1" size={18} />
-                  </div>
+                  <>
+                    Send Message
+                    <TbMailForward className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                  </>
                 )}
-              </span>
+              </div>
             </button>
           </div>
         </div>
       </div>
+
+      {/* Decorative Accent */}
+      <div className="absolute w-1 h-20 bg-gradient-to-b from-[#16f2b3] to-transparent left-0 top-20 rounded-full" />
     </div>
   );
 };
+
 export default ContactWithoutCaptcha;
