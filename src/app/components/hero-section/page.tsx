@@ -6,7 +6,7 @@ import { SplitText } from "gsap/dist/SplitText";
 import Link from "next/link";
 import { useRef } from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
+import { FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
@@ -15,7 +15,6 @@ import Tilt from "react-parallax-tilt";
 const HeroSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const designationRef = useRef<HTMLElement>(null);
-  const nameRef = useRef<HTMLElement>(null);
   const codeCardRef = useRef<HTMLDivElement>(null);
 
   useGSAP(

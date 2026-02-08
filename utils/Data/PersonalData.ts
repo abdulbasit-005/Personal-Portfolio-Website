@@ -14,7 +14,7 @@ export const personalData = {
   email: "rajaabdulbasit@gmail.com",
   phone: "+923175972977",
   address: "Islamabad",
-  github: "https://github.com/Ghost-oo5",
+  github: "https://github.com/abdulbasit-005",
   facebook: "https://www.facebook.com/profile.php?id=100092595303195",
   Instagram: "https://www.instagram.com/captain_ghost005",
   linkedIn: "https://www.linkedin.com/in/abdulbasit005/",
