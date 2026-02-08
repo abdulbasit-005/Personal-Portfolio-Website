@@ -64,7 +64,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         }}
       />
 
-      <Card className="relative flex flex-col h-full justify-between border border-white/10 bg-[#050505]/80 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden transition-all duration-500 hover:border-red-600/50 hover:shadow-red-600/10">
+      <Card className="relative flex flex-col h-full justify-between border border-white/10 bg-[#050505]/20 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden transition-all duration-500 hover:border-red-600/50 hover:shadow-red-600/10">
         <div className="flex-1">
           <div className="relative overflow-hidden aspect-video">
             {project.videos?.[0] ? (
