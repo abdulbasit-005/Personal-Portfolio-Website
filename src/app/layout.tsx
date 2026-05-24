@@ -1,45 +1,56 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Newsreader } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import ScrollToTopButton from "@/../utils/ScrollToTopButton";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { ToastProvider } from "@/components/providers/toast-provider";
+import { personalData } from "@/lib/content/personal";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
 
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-newsreader",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Abdul Basit | Full Stack Developer & AI Automation Expert",
-  description:
-    "Explore the portfolio of Abdul Basit, a Professional Full Stack Developer specializing in Next.js, AI Automation, and modern web solutions. Built for performance and user experience.",
+  metadataBase: new URL(personalData.siteUrl),
+  title: {
+    default: `${personalData.name} — ${personalData.role}`,
+    template: `%s · ${personalData.name}`,
+  },
+  description: personalData.tagline,
   keywords: [
     "Abdul Basit",
     "Full Stack Developer",
-    "Next.js Portfolio",
-    "AI Automation",
-    "Software Engineer",
-    "React Developer",
+    "Next.js",
+    "TypeScript",
+    "React",
   ],
-  authors: [{ name: "Abdul Basit" }],
+  authors: [{ name: personalData.name }],
   openGraph: {
-    title: "Abdul Basit | Personal Portfolio",
-    description:
-      "Full Stack Developer & AI Automation Expert — Building the future of the web.",
-    url: "https://abdulbasit-005.vercel.app",
-    siteName: "Abdul Basit Portfolio",
+    title: personalData.name,
+    description: personalData.tagline,
+    url: personalData.siteUrl,
+    siteName: personalData.name,
     images: [
       {
         url: "/Website-overview.png",
         width: 1200,
         height: 630,
-        alt: "Abdul Basit Portfolio Overview",
+        alt: `${personalData.name} portfolio`,
       },
     ],
     locale: "en_US",
@@ -47,14 +58,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abdul Basit | Full Stack Developer",
-    description: "Building modern web applications and AI automations.",
+    title: personalData.name,
+    description: personalData.tagline,
     images: ["/Website-overview.png"],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -63,16 +71,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar />
-        <main className="text-white">
-          <div className="container">{children}</div>
-        </main>
-        <ScrollToTopButton />
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} ${newsreader.variable}`}
+    >
+      <body className="font-sans min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">{children}</main>
         <Footer />
+        <ToastProvider />
       </body>
     </html>
   );

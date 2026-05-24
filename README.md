@@ -1,86 +1,28 @@
+# Abdul Basit — Portfolio
 
-# 🌐 Abdul Basit — Personal Portfolio
+Minimal portfolio site built with Next.js 15, TypeScript, and Tailwind CSS.
 
-Welcome to my **developer portfolio** built with **Next.js 15**, **Tailwind CSS**, and modern web tools. This site showcases my journey, skills, and projects — all wrapped in a sleek, animated, and responsive UI.
+**Live:** [abdul-basit-portfolio-website.vercel.app](https://abdul-basit-portfolio-website.vercel.app/)
 
----
-## 📸 Screenshot
+## Stack
 
-![Homepage of Abdul Basit’s Portfolio](public/Website-overview.png)
----
-## 🚀 Live Demo
+- Next.js 15 (App Router)
+- TypeScript
+- Tailwind CSS
+- EmailJS (contact form)
+- PWA via `@ducanh2912/next-pwa`
 
-🔗 [Visit Portfolio Website](https://abdul-basit-portfolio-website.vercel.app/)
-
----
-
-## 🧠 Tech Stack
-
-- ⚡ **Framework**: [Next.js 15](https://nextjs.org/)
-- 🎨 **Styling**: [Tailwind CSS 3](https://tailwindcss.com/)
-- 💻 **TypeScript**: Fully typed components & utilities
-- 🧩 **Animations**: [Lottie React](https://www.npmjs.com/package/lottie-react)
-- 📧 **Contact**: [EmailJS](https://www.emailjs.com/) integration
-- 📦 **PWA Ready**: Uses [`@ducanh2912/next-pwa`](https://www.npmjs.com/package/@ducanh2912/next-pwa)
-- 🔐 **reCAPTCHA v3**: [Google reCAPTCHA](https://www.npmjs.com/package/react-google-recaptcha)
-- 🧠 **Icons**: [Lucide](https://lucide.dev/), [React Icons](https://react-icons.github.io/)
-- ✅ **Prettier + ESLint**: Enforced code style & formatting
-- 🧪 **Husky**: Git hooks for pre-commit checks
-
----
-
-## 📁 Folder Structure
-
-```
-ghost-oo5-personal-portfolio-website/
-├── public/                  # Static assets, Lottie, images, icons
-├── src/app/
-│   ├── components/          # Reusable UI & page sections
-│   ├── pages/               # Page-specific components (About, Projects, etc.)
-│   ├── css/                 # Custom CSS (e.g., card effects)
-│   ├── fonts/               # Custom fonts
-├── utils/                   # Helper functions & data (skills, projects, etc.)
-├── .husky/                  # Git pre-commit hook
-├── tailwind.config.ts       # Tailwind theme configuration
-├── next.config.ts           # Next.js + PWA configuration
-```
-
----
-
-## 🛠️ Getting Started
-
-### 1. Clone this repo
+## Getting started
 
 ```bash
-git clone https://github.com/your-username/your-portfolio.git
-cd your-portfolio
-```
-
-### 2. Install dependencies
-
-```bash
-pnpm install
-# or
 npm install
-# or
-yarn install
-```
-
-### 3. Run the development server
-
-```bash
-pnpm dev
-# or
+cp .env.example .env.local
 npm run dev
 ```
 
-Then visit: [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000).
 
----
-
-## 🧪 Environment Variables
-
-Copy `.env.example` and create `.env.local`:
+## Environment variables
 
 ```env
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=
@@ -88,24 +30,22 @@ NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
 ```
 
----
-
-## 📦 Deployment
-
-deployed  [here](https://abdul-basit-portfolio-website.vercel.app/)
-
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
----
-
-## 📬 Contact Me
-
-Got a project in mind or just want to say hi?
-
-📧 [rajaabdulbasit005@gmail.com](mailto:rajaabdulbasit005@gmail.com)  
+## Project structure
 
 ```
+src/
+  app/              # Routes (/, /work, /work/[slug])
+  components/       # Layout, sections, UI
+  lib/content/      # Site copy and project data
+```
+
+## Scripts
+
+- `npm run dev` — development server
+- `npm run build` — production build
+- `npm run start` — serve production build
+- `npm run lint` — ESLint
+
+## License
+
+MIT
