@@ -1,45 +1,40 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./fonts.css";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import ScrollToTopButton from "@/../utils/ScrollToTopButton";
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import SiteNav from "@/components/layout/SiteNav";
+import ScrollProgress from "@/components/layout/ScrollProgress";
+import Footer from "@/components/layout/Footer";
+import SmoothScrollProvider from "@/components/layout/SmoothScrollProvider";
+import { site } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Abdul Basit | Full Stack Developer & AI Automation Expert",
-  description:
-    "Explore the portfolio of Abdul Basit, a Professional Full Stack Developer specializing in Next.js, AI Automation, and modern web solutions. Built for performance and user experience.",
+  metadataBase: new URL(site.url),
+  title: {
+    default: `${site.name} | Full-Stack Developer`,
+    template: `%s | ${site.name}`,
+  },
+  description: site.positioning,
   keywords: [
     "Abdul Basit",
     "Full Stack Developer",
-    "Next.js Portfolio",
-    "AI Automation",
-    "Software Engineer",
-    "React Developer",
+    "Next.js",
+    "AI automation",
+    "TypeScript",
   ],
-  authors: [{ name: "Abdul Basit" }],
+  authors: [{ name: site.name }],
   openGraph: {
-    title: "Abdul Basit | Personal Portfolio",
-    description:
-      "Full Stack Developer & AI Automation Expert — Building the future of the web.",
-    url: "https://abdulbasit-005.vercel.app",
-    siteName: "Abdul Basit Portfolio",
+    title: `${site.name} | Portfolio`,
+    description: site.tagline,
+    url: site.url,
+    siteName: `${site.name} Portfolio`,
     images: [
       {
         url: "/Website-overview.png",
         width: 1200,
         height: 630,
-        alt: "Abdul Basit Portfolio Overview",
+        alt: site.name,
       },
     ],
     locale: "en_US",
@@ -47,32 +42,31 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abdul Basit | Full Stack Developer",
-    description: "Building modern web applications and AI automations.",
+    title: site.name,
+    description: site.tagline,
     images: ["/Website-overview.png"],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar />
-        <main className="text-white">
-          <div className="container">{children}</div>
-        </main>
-        <ScrollToTopButton />
-        <Footer />
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        <SmoothScrollProvider>
+          <div className="grain-overlay" aria-hidden />
+          <ScrollProgress />
+          <SiteNav />
+          {children}
+          <Footer />
+        </SmoothScrollProvider>
+        <ToastContainer
+          position="bottom-right"
+          theme="dark"
+          toastClassName="!bg-surface !text-paper !border !border-[var(--border)]"
+        />
       </body>
     </html>
   );

@@ -6,6 +6,20 @@ import {
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: "/projects",
+        destination: "/work",
+        permanent: true,
+      },
+      {
+        source: "/projects/:id",
+        destination: "/work",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 const nextConfigFunction = async (phase: string) => {

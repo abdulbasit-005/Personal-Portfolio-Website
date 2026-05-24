@@ -1,86 +1,41 @@
+# Abdul Basit — Portfolio
 
-# 🌐 Abdul Basit — Personal Portfolio
+Immersive, cinematic portfolio built with Next.js 15 — scroll-driven chapters, WebGL hero atmosphere, and case-study-first project pages.
 
-Welcome to my **developer portfolio** built with **Next.js 15**, **Tailwind CSS**, and modern web tools. This site showcases my journey, skills, and projects — all wrapped in a sleek, animated, and responsive UI.
+## Live
 
----
-## 📸 Screenshot
+[abdul-basit-portfolio-website.vercel.app](https://abdul-basit-portfolio-website.vercel.app/)
 
-![Homepage of Abdul Basit’s Portfolio](public/Website-overview.png)
----
-## 🚀 Live Demo
+## Stack
 
-🔗 [Visit Portfolio Website](https://abdul-basit-portfolio-website.vercel.app/)
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS
+- **Motion:** GSAP ScrollTrigger, Lenis smooth scroll
+- **3D:** React Three Fiber (hero scene only)
+- **Contact:** EmailJS
 
----
-
-## 🧠 Tech Stack
-
-- ⚡ **Framework**: [Next.js 15](https://nextjs.org/)
-- 🎨 **Styling**: [Tailwind CSS 3](https://tailwindcss.com/)
-- 💻 **TypeScript**: Fully typed components & utilities
-- 🧩 **Animations**: [Lottie React](https://www.npmjs.com/package/lottie-react)
-- 📧 **Contact**: [EmailJS](https://www.emailjs.com/) integration
-- 📦 **PWA Ready**: Uses [`@ducanh2912/next-pwa`](https://www.npmjs.com/package/@ducanh2912/next-pwa)
-- 🔐 **reCAPTCHA v3**: [Google reCAPTCHA](https://www.npmjs.com/package/react-google-recaptcha)
-- 🧠 **Icons**: [Lucide](https://lucide.dev/), [React Icons](https://react-icons.github.io/)
-- ✅ **Prettier + ESLint**: Enforced code style & formatting
-- 🧪 **Husky**: Git hooks for pre-commit checks
-
----
-
-## 📁 Folder Structure
+## Structure
 
 ```
-ghost-oo5-personal-portfolio-website/
-├── public/                  # Static assets, Lottie, images, icons
-├── src/app/
-│   ├── components/          # Reusable UI & page sections
-│   ├── pages/               # Page-specific components (About, Projects, etc.)
-│   ├── css/                 # Custom CSS (e.g., card effects)
-│   ├── fonts/               # Custom fonts
-├── utils/                   # Helper functions & data (skills, projects, etc.)
-├── .husky/                  # Git pre-commit hook
-├── tailwind.config.ts       # Tailwind theme configuration
-├── next.config.ts           # Next.js + PWA configuration
+src/
+  app/              # Routes: /, /work, /work/[slug]
+  components/       # Chapters, layout, canvas, work cards
+  content/          # Site copy, projects, experience (slug-based)
+  lib/              # Motion utilities, email validation
 ```
 
----
-
-## 🛠️ Getting Started
-
-### 1. Clone this repo
+## Getting started
 
 ```bash
-git clone https://github.com/your-username/your-portfolio.git
-cd your-portfolio
-```
-
-### 2. Install dependencies
-
-```bash
-pnpm install
-# or
 npm install
-# or
-yarn install
-```
-
-### 3. Run the development server
-
-```bash
-pnpm dev
-# or
+cp .env.example .env.local
+# Add EmailJS keys to .env.local
 npm run dev
 ```
 
-Then visit: [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000).
 
----
-
-## 🧪 Environment Variables
-
-Copy `.env.example` and create `.env.local`:
+## Environment
 
 ```env
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=
@@ -88,24 +43,25 @@ NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
 ```
 
----
+## Scripts
 
-## 📦 Deployment
+| Command         | Description        |
+| --------------- | ------------------ |
+| `npm run dev`   | Development server |
+| `npm run build` | Production build   |
+| `npm run start` | Start production   |
+| `npm run lint`  | ESLint             |
 
-deployed  [here](https://abdul-basit-portfolio-website.vercel.app/)
+## Routes
 
----
+| Path           | Description                      |
+| -------------- | -------------------------------- |
+| `/`            | Immersive home (scroll chapters) |
+| `/work`        | Full project archive             |
+| `/work/[slug]` | Individual case study            |
 
-## 📄 License
+Legacy `/projects` URLs redirect to `/work`.
 
-This project is open-source and available under the [MIT License](LICENSE).
+## Contact
 
----
-
-## 📬 Contact Me
-
-Got a project in mind or just want to say hi?
-
-📧 [rajaabdulbasit005@gmail.com](mailto:rajaabdulbasit005@gmail.com)  
-
-```
+[rajaabdulbasit@gmail.com](mailto:rajaabdulbasit@gmail.com)
