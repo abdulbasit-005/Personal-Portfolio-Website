@@ -62,9 +62,9 @@ export default function HeroChapter() {
 
       <div
         ref={contentRef}
-        className="relative max-w-site mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
+        className="relative max-w-site mx-auto w-full min-w-0 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
       >
-        <div className="lg:col-span-7 order-2 lg:order-1">
+        <div className="lg:col-span-7 order-2 lg:order-1 min-w-0">
           <p
             data-hero-animate
             className="text-mono text-[10px] uppercase tracking-[0.35em] text-muted mb-6"
@@ -73,7 +73,7 @@ export default function HeroChapter() {
           </p>
           <h1
             data-hero-animate
-            className="text-display text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.95] text-paper"
+            className="text-display text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.95] text-paper break-words"
           >
             {site.tagline}
           </h1>
