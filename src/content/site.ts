@@ -40,6 +40,47 @@ export const site = {
       items: ["Node.js", "Prisma", "MongoDB", "Stripe"],
     },
   ],
+  toolkit: [
+    {
+      label: "Frontend",
+      items: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Bootstrap",
+        "Material UI",
+        "Radix UI",
+      ],
+    },
+    {
+      label: "Backend & Data",
+      items: [
+        "Node.js",
+        "Prisma",
+        "MongoDB",
+        "MySQL",
+        "Firebase",
+        "tRPC",
+        "REST APIs",
+      ],
+    },
+    {
+      label: "AI & Automation",
+      items: ["OpenAI", "LangChain", "Pinecone", "n8n"],
+    },
+    {
+      label: "Tools",
+      items: ["Git", "Stripe", "NextAuth", "Vercel", "React Query"],
+    },
+    {
+      label: "Design",
+      items: ["Figma", "Photoshop", "Illustrator", "Canva"],
+    },
+  ],
   navChapters: [
     { id: "hero", label: "Intro" },
     { id: "positioning", label: "About" },

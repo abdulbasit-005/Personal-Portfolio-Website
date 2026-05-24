@@ -28,6 +28,21 @@ export default function CapabilitiesChapter() {
           },
         },
       );
+      gsap.fromTo(
+        ".toolkit-reveal",
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          stagger: 0.08,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".toolkit-band",
+            start: "top 85%",
+          },
+        },
+      );
     }, sectionRef);
     return () => ctx.revert();
   }, [reducedMotion]);
@@ -73,6 +88,43 @@ export default function CapabilitiesChapter() {
               </ul>
             </article>
           ))}
+        </div>
+
+        <div className="toolkit-band mt-24 pt-16 border-t border-[var(--border)]">
+          <div className="toolkit-reveal flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+            <div>
+              <p className="text-mono text-[10px] uppercase tracking-[0.35em] text-muted">
+                Full toolkit
+              </p>
+              <p className="text-display text-2xl md:text-3xl text-paper mt-3">
+                Technologies I work with
+              </p>
+            </div>
+            <p className="text-muted text-sm max-w-sm leading-relaxed">
+              Grouped by practice area—same stack I use on production work and
+              personal builds.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+            {site.toolkit.map((group) => (
+              <div key={group.label} className="toolkit-reveal">
+                <h4 className="text-mono text-[10px] uppercase tracking-[0.25em] text-accent mb-4">
+                  {group.label}
+                </h4>
+                <ul className="flex flex-wrap gap-2">
+                  {group.items.map((skill) => (
+                    <li
+                      key={skill}
+                      className="text-mono text-[10px] uppercase tracking-wider text-muted/90 border border-[var(--border)] px-3 py-1.5 rounded-full bg-ink/40 hover:border-accent/30 hover:text-paper transition-colors"
+                    >
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
