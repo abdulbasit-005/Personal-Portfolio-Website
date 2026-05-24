@@ -2,6 +2,8 @@ export const site = {
   name: "Abdul Basit",
   role: "Full-Stack Developer",
   tagline: "Building AI-native products with Next.js & Node.",
+  intro:
+    "Full-stack developer crafting AI-native web products with clarity and precision.",
   positioning:
     "I ship full-stack web products—from conversational AI dashboards at Forthlogic to SaaS tools with type-safe APIs, vector search, and production-grade UX. Based in Islamabad, working with teams across US and EU time zones.",
   email: "rajaabdulbasit@gmail.com",

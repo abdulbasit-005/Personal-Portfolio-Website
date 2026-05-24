@@ -38,12 +38,18 @@ export default function PositioningChapter() {
       ref={sectionRef}
       className="chapter-padding border-t border-[var(--border)]"
     >
-      <div className="max-w-site mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+      <div className="max-w-site mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
         <div className="lg:col-span-4 positioning-reveal">
           <p className="text-mono text-[10px] uppercase tracking-[0.35em] text-muted">
             01 — About
           </p>
-          <h2 className="text-display text-4xl md:text-5xl text-paper mt-4 leading-tight">
+          <p className="text-display text-3xl md:text-4xl text-paper mt-6 leading-tight">
+            {site.name}
+          </p>
+          <p className="text-mono text-xs text-muted mt-2 uppercase tracking-widest">
+            {site.role}
+          </p>
+          <h2 className="text-display text-2xl md:text-3xl text-muted mt-10 leading-tight">
             What I build
           </h2>
         </div>
