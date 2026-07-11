@@ -88,7 +88,7 @@ const ProjectDetails = async ({ params }: Props) => {
                 </Badge>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white via-red-100 to-slate-400">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-red-100 to-slate-400">
                 {project.name}
               </h1>
 
@@ -128,10 +128,7 @@ const ProjectDetails = async ({ params }: Props) => {
             {/* Highlights */}
             <section className="flex flex-col gap-8">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center border border-red-500/20">
-                  <ShieldCheck className="w-6 h-6 text-red-500 shadow-[0_0_15px_rgba(239,68,68,0.5)]" />
-                </div>
-                <h2 className="text-3xl font-black text-white">
+                <h2 className="text-3xl font-bold text-white">
                   Project Highlights
                 </h2>
               </div>
@@ -154,10 +151,7 @@ const ProjectDetails = async ({ params }: Props) => {
             {project.images && project.images.length > 1 && (
               <section className="flex flex-col gap-8">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-red-900/10 flex items-center justify-center border border-red-900/20">
-                    <Calendar className="w-6 h-6 text-red-600" />
-                  </div>
-                  <h2 className="text-3xl font-black text-white">
+                  <h2 className="text-3xl font-bold text-white">
                     Visual Showcase
                   </h2>
                 </div>
@@ -259,7 +253,7 @@ const ProjectDetails = async ({ params }: Props) => {
         <div className="mt-32 pt-20 border-t border-white/5">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div className="flex flex-col gap-4">
-              <h2 className="text-4xl lg:text-5xl font-black text-white tracking-tighter">
+              <h2 className="text-4xl lg:text-5xl font-bold text-white tracking-tighter">
                 Explore More Work
               </h2>
               <p className="text-slate-400 text-lg font-medium">
@@ -268,7 +262,7 @@ const ProjectDetails = async ({ params }: Props) => {
             </div>
             <Link
               href="/#projects"
-              className="text-red-500 font-black uppercase tracking-[0.2em] text-sm hover:text-red-400 transition-colors flex items-center gap-2 group"
+              className="text-red-500 font-bold uppercase tracking-[0.2em] text-sm hover:text-red-400 transition-colors flex items-center gap-2 group"
             >
               View Full Archive{" "}
               <span className="group-hover:translate-x-1 transition-transform">

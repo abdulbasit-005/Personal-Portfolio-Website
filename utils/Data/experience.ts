@@ -29,7 +29,7 @@ export const experiences = [
     id: 3,
     title: "Frontend Developer (Remote)",
     company: "Juhuu GmbH",
-    duration: "Oct 2023 - Mar 2024",
+    duration: "Sep 2023 - Mar 2024",
     details: [
       "Worked on IoT-based platform interfaces for micro-mobility solutions.",
       "Translated complex Figma designs into responsive, interactive React components.",

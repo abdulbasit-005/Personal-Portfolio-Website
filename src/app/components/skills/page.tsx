@@ -56,7 +56,7 @@ function Skills() {
                 </span>
                 <span className="w-8 h-[1px] bg-red-500/50"></span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter text-center">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tighter text-center">
                 The{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">
                   Tech Stack

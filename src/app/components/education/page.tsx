@@ -78,7 +78,7 @@ function Education() {
               <div className="relative group p-10 lg:p-16 rounded-[40px] border border-white/5 bg-white/[0.01] backdrop-blur-3xl overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-red-600/5 via-transparent to-red-900/5" />
                 <div className="relative z-10 flex flex-col gap-8 text-center lg:text-left">
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
                     Foundation of <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">
                       Knowledge

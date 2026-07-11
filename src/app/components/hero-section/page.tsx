@@ -116,13 +116,13 @@ const HeroSection = () => {
             <span className="hero-tag px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 text-xs font-bold tracking-[0.3em] w-fit">
               WELCOME TO MY UNIVERSE
             </span>
-            <h1 className="hero-heading text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1]">
+            <h1 className="hero-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
               Crafting{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">
                 Digital
               </span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-800 to-red-950">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800">
                 Masterpieces
               </span>
             </h1>
@@ -242,16 +242,19 @@ const HeroSection = () => {
                   <div className="flex gap-4">
                     <span className="text-slate-600 italic">03</span>
                     <p className="ml-4">
-                      <span className="text-slate-200">focus:</span>{" "}
-                      <span className="text-red-300">'Fullstack Mastery'</span>,
+                      <span className="text-slate-200">role:</span>{" "}
+                      <span className="text-red-300">
+                        'Full-Stack Developer'
+                      </span>
+                      ,
                     </p>
                   </div>
                   <div className="flex gap-4">
                     <span className="text-slate-600 italic">04</span>
                     <p className="ml-4">
-                      <span className="text-slate-200">skills:</span> [
+                      <span className="text-slate-200">frontend:</span> [
                       <span className="text-red-300">
-                        'NextJS', 'GSAP', 'AI'
+                        'Next.js', 'React', 'Tailwind'
                       </span>
                       ],
                     </p>
@@ -259,25 +262,46 @@ const HeroSection = () => {
                   <div className="flex gap-4">
                     <span className="text-slate-600 italic">05</span>
                     <p className="ml-4">
+                      <span className="text-slate-200">backend:</span> [
+                      <span className="text-red-300">
+                        'Node.js', 'Express', 'Prisma', 'MongoDB'
+                      </span>
+                      ],
+                    </p>
+                  </div>
+                  <div className="flex gap-4">
+                    <span className="text-slate-600 italic">06</span>
+                    <p className="ml-4">
+                      <span className="text-slate-200">focus:</span>{" "}
+                      <span className="text-red-300">
+                        'Scalable SaaS & Automation'
+                      </span>
+                      ,
+                    </p>
+                  </div>
+                  <div className="flex gap-4">
+                    <span className="text-slate-600 italic">07</span>
+                    <p className="ml-4">
                       <span className="text-slate-200">passionate:</span>{" "}
                       <span className="text-red-600">true</span>,
                     </p>
                   </div>
                   <div className="flex gap-4">
-                    <span className="text-slate-600 italic">06</span>
+                    <span className="text-slate-600 italic">08</span>
                     <p className="ml-4">
                       <span className="text-slate-200">motto:</span>{" "}
                       <span className="text-red-400">"Build with Purpose"</span>
                     </p>
                   </div>
                   <div className="flex gap-4">
-                    <span className="text-slate-600 italic">07</span>
+                    <span className="text-slate-600 italic">09</span>
                     <p>{"};"}</p>
                   </div>
                   <div className="flex gap-4 mt-4">
-                    <span className="text-slate-600 italic">08</span>
+                    <span className="text-slate-600 italic">10</span>
                     <p>
-                      <span className="text-red-500">developer</span>.
+                      <span className="text-red-500">await</span>{" "}
+                      <span className="text-white">developer</span>.
                       <span className="text-white">showcase</span>();
                     </p>
                   </div>

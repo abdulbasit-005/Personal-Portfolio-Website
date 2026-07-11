@@ -11,7 +11,7 @@ export const personalData = {
   ],
   description:
     "I’m Abdul Basit, a dedicated Full-Stack Developer specializing in TypeScript and crafting responsive, user‑centric interfaces with React and Next.js. I build full‑stack websites using Next.js and Prisma—leveraging Prisma’s type‑safe ORM to integrate robust database layers seamlessly into my applications. Passionate about continuous learning, I stay at the forefront of emerging technologies to deliver scalable, maintainable solutions that exceed expectations.",
-  email: "rajaabdulbasit@gmail.com",
+  email: "rajaabdulbasit005@gmail.com",
   phone: "+923175972977",
   address: "Islamabad",
   github: "https://github.com/abdulbasit-005",

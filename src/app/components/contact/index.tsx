@@ -66,14 +66,11 @@ function ContactSection() {
         <SectionReveal direction="up">
           <div className="flex flex-col items-center gap-6 mb-20">
             <div className="flex items-center gap-3 text-red-500">
-              <div className="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center">
-                <MessageSquare className="w-5 h-5 shadow-[0_0_10px_rgba(239,68,68,0.5)]" />
-              </div>
               <span className="text-sm font-bold uppercase tracking-[0.3em]">
                 Communication
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight text-center">
               Let's{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">
                 Connect

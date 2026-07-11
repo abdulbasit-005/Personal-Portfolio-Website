@@ -18,6 +18,12 @@ import {
   SiAdobeillustrator,
   SiAdobephotoshop,
   SiFreelancer,
+  SiExpress,
+  SiPrisma,
+  SiVercel,
+  SiN8N,
+  SiFramer,
+  SiRadixui,
 } from "react-icons/si";
 import { IconType } from "react-icons";
 
@@ -71,6 +77,18 @@ export const getSkillIcon = (skill: string): IconType => {
       return SiAdobeillustrator;
     case "photoshop":
       return SiAdobephotoshop;
+    case "express":
+      return SiExpress;
+    case "prisma":
+      return SiPrisma;
+    case "vercel":
+      return SiVercel;
+    case "n8n":
+      return SiN8N;
+    case "framer":
+      return SiFramer;
+    case "shadcn/ui":
+      return SiRadixui;
     default:
       return SiFreelancer; // Fallback icon
   }
@@ -113,6 +131,15 @@ export const getSkillColor = (skill: string): string => {
     case "materialui":
     case "mui":
       return "#ef4444"; // Red-500
+    case "express":
+    case "vercel":
+    case "shadcn/ui":
+    case "prisma":
+      return "#ffffff";
+    case "n8n":
+      return "#ea4335";
+    case "framer":
+      return "#0055FF";
     default:
       return "#ef4444"; // Default Red
   }

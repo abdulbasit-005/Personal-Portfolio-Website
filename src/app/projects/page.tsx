@@ -10,7 +10,7 @@ const ProjectsPage = () => {
 
       <div className="flex flex-col gap-16 items-center container mx-auto py-24 px-4 sm:px-8 relative z-10">
         <div className="max-w-3xl text-center flex flex-col gap-6">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tighter">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
             The Digital{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">
               Vault

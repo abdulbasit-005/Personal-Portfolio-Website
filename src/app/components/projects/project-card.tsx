@@ -137,7 +137,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                     e.preventDefault();
                     setShowAllTags(!showAllTags);
                   }}
-                  className="flex items-center gap-1 text-red-500 hover:text-red-400 text-[11px] font-black transition-colors pl-1 uppercase tracking-widest"
+                  className="flex items-center gap-1 text-red-500 hover:text-red-400 text-[11px] font-bold transition-colors pl-1 uppercase tracking-widest"
                 >
                   {showAllTags ? (
                     <ChevronUp className="w-3 h-3" />
