@@ -41,7 +41,7 @@ export default function PositioningChapter() {
       <div className="max-w-site mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
         <div className="lg:col-span-4 positioning-reveal">
           <p className="text-mono text-[10px] uppercase tracking-[0.35em] text-muted">
-            01 — About
+            01 - About
           </p>
           <p className="text-display text-3xl md:text-4xl text-paper mt-6 leading-tight">
             {site.name}

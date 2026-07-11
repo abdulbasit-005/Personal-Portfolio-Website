@@ -21,7 +21,7 @@ export const projects: Project[] = [
     name: "Docs-now",
     tagline: "Chat with your PDFs",
     description:
-      "AI SaaS for document conversations—streaming GPT responses, Pinecone semantic search, Kinde auth, and Stripe subscriptions on a type-safe tRPC + Prisma stack.",
+      "AI SaaS for document conversations-streaming GPT responses, Pinecone semantic search, Kinde auth, and Stripe subscriptions on a type-safe tRPC + Prisma stack.",
     tools: [
       "Next.js 15",
       "TypeScript",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     name: "Issue Tracker",
     tagline: "Full-stack issue management",
     description:
-      "Next.js 15 app with Google OAuth, Prisma/MySQL, interactive dashboards, and Radix UI—built for teams who need fast filtering and reliable CRUD.",
+      "Next.js 15 app with Google OAuth, Prisma/MySQL, interactive dashboards, and Radix UI-built for teams who need fast filtering and reliable CRUD.",
     tools: [
       "Next.js 15",
       "Prisma",
@@ -90,7 +90,7 @@ export const projects: Project[] = [
     name: "GameHub",
     tagline: "Discover games at speed",
     description:
-      "RAWG-powered discovery platform with genre filters, search, and infinite scroll—React Query keeps the feed snappy.",
+      "RAWG-powered discovery platform with genre filters, search, and infinite scroll-React Query keeps the feed snappy.",
     tools: ["React", "RAWG API", "React Query", "Chakra UI", "Tailwind"],
     role: "Frontend Developer",
     code: "https://github.com/Ghost-oo5/game-hub",
@@ -129,7 +129,7 @@ export const projects: Project[] = [
     name: "JUHUU Marketplace",
     tagline: "IoT commerce surface",
     description:
-      "Marketplace for JUHUU's micro-mobility platform—React and Tailwind with brand-consistent, performance-minded UI.",
+      "Marketplace for JUHUU's micro-mobility platform-React and Tailwind with brand-consistent, performance-minded UI.",
     tools: ["React", "Tailwind CSS"],
     role: "Full-Stack Developer",
     code: "https://github.com/Ghost-oo5/marketplace-juhuu-app",
@@ -148,7 +148,7 @@ export const projects: Project[] = [
     name: "JUHUU BikeBox",
     tagline: "Product marketing site",
     description:
-      "Promotional site for secure bike storage—focused storytelling, responsive layout, and fast load with lean HTML/CSS/JS.",
+      "Promotional site for secure bike storage-focused storytelling, responsive layout, and fast load with lean HTML/CSS/JS.",
     tools: ["HTML", "CSS", "JavaScript"],
     role: "Frontend Developer",
     code: "https://github.com/Ghost-oo5/Juhoo",
@@ -186,7 +186,7 @@ export const projects: Project[] = [
     name: "Notion Table Clone",
     tagline: "Editable task grid",
     description:
-      "Drag-and-drop columns and rows, tag inputs, localStorage persistence, and dark mode—React, TypeScript, Vite.",
+      "Drag-and-drop columns and rows, tag inputs, localStorage persistence, and dark mode-React, TypeScript, Vite.",
     tools: ["React", "TypeScript", "Vite", "Chakra UI"],
     role: "Frontend Developer",
     code: "https://github.com/Ghost-oo5/Notion-Table-Clone",

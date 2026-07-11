@@ -1,6 +1,6 @@
-# Abdul Basit — Portfolio
+# Abdul Basit - Portfolio
 
-Immersive, cinematic portfolio built with Next.js 15 — scroll-driven chapters, WebGL hero atmosphere, and case-study-first project pages.
+Immersive, cinematic portfolio built with Next.js 15 - scroll-driven chapters, WebGL hero atmosphere, and case-study-first project pages.
 
 ## Live
 

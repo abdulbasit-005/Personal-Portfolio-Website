@@ -69,7 +69,7 @@ export default function HeroChapter() {
             data-hero-animate
             className="text-mono text-[10px] uppercase tracking-[0.35em] text-muted mb-6"
           >
-            {site.name} — {site.role}
+            {site.name} - {site.role}
           </p>
           <h1
             data-hero-animate

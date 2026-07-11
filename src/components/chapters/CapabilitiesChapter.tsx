@@ -55,7 +55,7 @@ export default function CapabilitiesChapter() {
     >
       <div className="max-w-site mx-auto">
         <p className="text-mono text-[10px] uppercase tracking-[0.35em] text-muted">
-          03 — Capabilities
+          03 - Capabilities
         </p>
         <h2 className="text-display text-4xl md:text-5xl text-paper mt-4 mb-16 max-w-xl">
           How I deliver
@@ -101,7 +101,7 @@ export default function CapabilitiesChapter() {
               </p>
             </div>
             <p className="text-muted text-sm max-w-sm leading-relaxed">
-              Grouped by practice area—same stack I use on production work and
+              Grouped by practice area-same stack I use on production work and
               personal builds.
             </p>
           </div>

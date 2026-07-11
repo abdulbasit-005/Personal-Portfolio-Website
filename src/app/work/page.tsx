@@ -21,7 +21,7 @@ export default function WorkPage() {
           The archive
         </h1>
         <p className="text-muted mt-6 max-w-prose text-lg">
-          Production apps, experiments, and client work—documented with context,
+          Production apps, experiments, and client work-documented with context,
           constraints, and outcomes.
         </p>
 

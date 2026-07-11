@@ -5,7 +5,7 @@ export const site = {
   intro:
     "Full-stack developer crafting AI-native web products with clarity and precision.",
   positioning:
-    "I ship full-stack web products—from conversational AI dashboards at Forthlogic to SaaS tools with type-safe APIs, vector search, and production-grade UX. Based in Islamabad, working with teams across US and EU time zones.",
+    "I ship full-stack web products-from conversational AI dashboards at Forthlogic to SaaS tools with type-safe APIs, vector search, and production-grade UX. Based in Islamabad, working with teams across US and EU time zones.",
   email: "rajaabdulbasit@gmail.com",
   phone: "+923175972977",
   location: "Islamabad, Pakistan",
@@ -24,7 +24,7 @@ export const site = {
     {
       title: "Product UI",
       description:
-        "Dashboards, design systems, and responsive interfaces with Next.js, Tailwind, and Radix—built for clarity under real data loads.",
+        "Dashboards, design systems, and responsive interfaces with Next.js, Tailwind, and Radix-built for clarity under real data loads.",
       items: ["Next.js", "TypeScript", "Tailwind", "Radix UI"],
     },
     {
@@ -36,7 +36,7 @@ export const site = {
     {
       title: "Full-Stack Systems",
       description:
-        "APIs, auth, payments, and databases—Prisma, MongoDB, Stripe, and Node services designed to scale with product growth.",
+        "APIs, auth, payments, and databases-Prisma, MongoDB, Stripe, and Node services designed to scale with product growth.",
       items: ["Node.js", "Prisma", "MongoDB", "Stripe"],
     },
   ],

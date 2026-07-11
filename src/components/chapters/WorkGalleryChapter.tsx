@@ -113,11 +113,11 @@ export default function WorkGalleryChapter() {
       ref={sectionRef}
       className="relative min-h-0 md:min-h-screen overflow-hidden"
     >
-      <div className="chapter-padding pb-0">
-        <div className="max-w-site mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16 min-w-0">
+      <div className="px-6 md:px-12 lg:px-20 pt-24 md:pt-32 lg:pt-40">
+        <div className="max-w-site mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6 mb-6 md:mb-8 min-w-0">
           <div className="min-w-0">
             <p className="text-mono text-[10px] uppercase tracking-[0.35em] text-muted">
-              02 — Selected work
+              02 - Selected work
             </p>
             <h2 className="text-display text-4xl md:text-6xl text-paper mt-4 break-words">
               Case studies
@@ -132,7 +132,7 @@ export default function WorkGalleryChapter() {
         </div>
       </div>
 
-      {/* Mobile: vertical stack — no horizontal pin */}
+      {/* Mobile: vertical stack - no horizontal pin */}
       <div className="md:hidden flex flex-col gap-6 px-6 pb-24 max-w-full">
         {featuredProjects.map((project, index) => (
           <ProjectSlide

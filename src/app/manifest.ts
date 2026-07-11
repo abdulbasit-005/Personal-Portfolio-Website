@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Abdul Basit Portfolio",
     short_name: "Abdul Basit",
-    description: "Immersive portfolio — full-stack developer & AI workflows",
+    description: "Immersive portfolio - full-stack developer & AI workflows",
     start_url: "/",
     display: "standalone",
     background_color: "#0B0A09",
