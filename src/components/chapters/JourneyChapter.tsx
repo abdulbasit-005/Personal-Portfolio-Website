@@ -36,7 +36,7 @@ export default function JourneyChapter() {
     <section
       id="journey"
       ref={sectionRef}
-      className="chapter-padding border-t border-[var(--border)]"
+      className="px-6 md:px-12 lg:px-20 py-24 md:py-32 lg:py-40 border-t border-[var(--border)]"
     >
       <div className="max-w-site mx-auto">
         <p className="text-mono text-[10px] uppercase tracking-[0.35em] text-muted">

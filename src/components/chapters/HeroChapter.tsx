@@ -50,7 +50,7 @@ export default function HeroChapter() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center chapter-padding overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 py-24 md:py-32 lg:py-40 overflow-hidden"
     >
       {!reducedMotion && showAmbient && <HeroScene />}
       {!reducedMotion && !showAmbient && (

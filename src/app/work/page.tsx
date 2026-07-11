@@ -10,7 +10,7 @@ export const metadata = {
 export default function WorkPage() {
   return (
     <main className="pt-32 pb-24">
-      <div className="chapter-padding pt-0 max-w-site mx-auto">
+      <div className="px-6 md:px-12 lg:px-20 py-24 md:py-32 lg:py-40 pt-0 max-w-site mx-auto">
         <Link
           href="/"
           className="text-mono text-[10px] uppercase tracking-widest text-muted hover:text-accent transition-colors"

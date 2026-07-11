@@ -29,7 +29,14 @@ function ProjectSlide({
             muted
             loop
             playsInline
-            onMouseEnter={(e) => e.currentTarget.play()}
+            onMouseEnter={(e) => {
+              const playPromise = e.currentTarget.play();
+              if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                  // Ignore auto-play errors
+                });
+              }
+            }}
             onMouseLeave={(e) => {
               e.currentTarget.pause();
               e.currentTarget.currentTime = 0;
@@ -39,6 +46,7 @@ function ProjectSlide({
           <Image
             src={project.images[0] ?? "/placeholder/placeholder.png"}
             alt={project.name}
+            priority={index === 0}
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 45vw"
@@ -157,6 +165,24 @@ export default function WorkGalleryChapter() {
             className="w-[55vw] lg:w-[45vw] max-w-[640px]"
           />
         ))}
+      </div>
+
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden md:flex">
+        <Link
+          href="/work"
+          className="text-mono text-xs uppercase tracking-[0.2em] text-muted hover:text-accent transition-colors link-underline"
+        >
+          Explore all projects →
+        </Link>
+      </div>
+
+      <div className="md:hidden flex justify-center pb-24">
+        <Link
+          href="/work"
+          className="text-mono text-xs uppercase tracking-[0.2em] text-muted hover:text-accent transition-colors link-underline"
+        >
+          Explore all projects →
+        </Link>
       </div>
     </section>
   );

@@ -65,19 +65,53 @@
     font-family: var(--font-mono), ui-monospace, monospace;
   }
 
-  .chapter-padding {
-    @apply px-6 md:px-12 lg:px-20 py-24 md:py-32 lg:py-40;
+  @keyframes noise {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    10% {
+      transform: translate(-5%, -5%);
+    }
+    20% {
+      transform: translate(-10%, 5%);
+    }
+    30% {
+      transform: translate(5%, -10%);
+    }
+    40% {
+      transform: translate(-5%, 15%);
+    }
+    50% {
+      transform: translate(-10%, 5%);
+    }
+    60% {
+      transform: translate(15%, 0);
+    }
+    70% {
+      transform: translate(0, 10%);
+    }
+    80% {
+      transform: translate(3%, 15%);
+    }
+    90% {
+      transform: translate(-10%, 10%);
+    }
   }
 
   .grain-overlay {
     pointer-events: none;
     position: fixed;
-    inset: 0;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
     z-index: 50;
-    opacity: var(--grain-opacity);
+    opacity: 0.14;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     background-repeat: repeat;
     background-size: 180px 180px;
+    animation: noise 0.8s infinite steps(10);
   }
 
   .link-underline {

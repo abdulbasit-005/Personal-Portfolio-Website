@@ -42,9 +42,10 @@ export const projects: Project[] = [
       "/projects/docs-now/docs-now-chat.jpg",
     ],
     highlights: [
-      "Streaming AI chat with context-aware PDF understanding",
-      "Vector embeddings and semantic search at scale",
-      "Subscription billing with Free and Pro tiers",
+      "Built an AI-powered SaaS platform for chatting with PDF documents using OpenAI embeddings and vector search.",
+      "Implemented secure authentication, subscription billing with Stripe, and real-time streaming responses.",
+      "Designed scalable full-stack architecture with responsive dashboards and efficient document handling workflows.",
+      "Integrated file upload, document vectorization, semantic search, and AI response generation features.",
     ],
     challenges: [
       "Balancing streaming latency with retrieval accuracy across large documents",
@@ -76,8 +77,9 @@ export const projects: Project[] = [
       "/projects/issue-tracker/issues.png",
     ],
     highlights: [
-      "Secure Google OAuth with session-aware routes",
-      "Real-time dashboard charts and advanced filters",
+      "Full-stack issue tracker with NextAuth-secured CRUD APIs, Prisma schema/migrations, and React Query data fetching.",
+      "Dashboard featuring summary cards, Recharts bar charts, status filtering, pagination, and dynamic routing.",
+      "Reusable Radix UI components.",
     ],
     challenges: [
       "NextAuth session flow integrated cleanly with Prisma models",
@@ -98,8 +100,9 @@ export const projects: Project[] = [
     date: "2024",
     images: ["/projects/gamehub/gamehub.png"],
     highlights: [
-      "External API integration with caching strategy",
-      "Smooth infinite scroll on varied viewports",
+      "Designed a responsive React front-end using the RAWG API to fetch and display 10K+ video game entries, achieving a 95% UI performance score.",
+      "Implemented game categories, search functionality, and detailed game information.",
+      "Designed a modern and responsive UI to enhance user experience.",
     ],
     challenges: ["API rate limits and client-side cache invalidation"],
     featured: true,
@@ -122,7 +125,7 @@ export const projects: Project[] = [
       "Workflow automation via n8n",
     ],
     challenges: ["Async task orchestration with reliable user feedback"],
-    featured: true,
+    featured: false,
   },
   {
     slug: "juhuu-marketplace",
@@ -175,11 +178,11 @@ export const projects: Project[] = [
     date: "2023",
     images: ["/placeholder/placeholder.png"],
     highlights: [
-      "Real-time messaging on Firestore",
-      "Cross-platform navigation patterns",
+      "Created a React Native/Expo rental management app with Firebase Auth & Firestore, featuring conditional navigation.",
+      "Multi-channel tenant-manager communication, notification handling, custom UI components, and Android performance optimizations.",
     ],
     challenges: ["Realtime sync across device profiles"],
-    featured: false,
+    featured: true,
   },
   {
     slug: "notion-table-clone",

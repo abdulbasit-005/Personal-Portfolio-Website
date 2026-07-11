@@ -36,7 +36,7 @@ export default function PositioningChapter() {
     <section
       id="positioning"
       ref={sectionRef}
-      className="chapter-padding border-t border-[var(--border)]"
+      className="px-6 md:px-12 lg:px-20 py-24 md:py-32 lg:py-40 border-t border-[var(--border)]"
     >
       <div className="max-w-site mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
         <div className="lg:col-span-4 positioning-reveal">
@@ -54,14 +54,8 @@ export default function PositioningChapter() {
           </h2>
         </div>
         <div className="lg:col-span-8 positioning-reveal">
-          <p className="text-xl md:text-2xl text-paper leading-relaxed">
+          <p className="text-xl md:text-2xl text-paper leading-relaxed whitespace-pre-line">
             {site.positioning}
-          </p>
-          <p className="mt-8 text-muted leading-relaxed max-w-prose">
-            TypeScript end-to-end. Next.js on the front, Node and MongoDB on the
-            back, Prisma when the data model matters. I care about load times,
-            clear information hierarchy, and code that the next developer can
-            actually read.
           </p>
         </div>
       </div>

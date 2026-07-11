@@ -38,7 +38,7 @@ export default async function CaseStudyPage({ params }: Props) {
 
   return (
     <main className="pt-32 pb-24">
-      <article className="max-w-site mx-auto chapter-padding pt-0">
+      <article className="max-w-site mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32 lg:py-40 pt-0">
         <Link
           href="/work"
           className="text-mono text-[10px] uppercase tracking-widest text-muted hover:text-accent transition-colors"
