@@ -25,6 +25,8 @@
     @apply scroll-smooth;
     overflow-x: clip;
     max-width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--ink);
   }
 
   html.lenis,
@@ -53,6 +55,25 @@
   ::selection {
     background: var(--accent);
     color: var(--ink);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--ink);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e6ff99; /* Slightly brighter version of accent on hover */
   }
 }
 
