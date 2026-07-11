@@ -1,93 +1,117 @@
 "use client";
 import { experiences } from "@/../utils/Data/experience";
-import { BsPersonWorkspace } from "react-icons/bs";
-import { Calendar, Building2, ChevronRight } from "lucide-react";
+import { Building2 } from "lucide-react";
 import SectionReveal from "../SectionReveal";
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useGSAP } from "@gsap/react";
 
 function Experience() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const lineRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      if (containerRef.current && lineRef.current) {
+        gsap.fromTo(
+          lineRef.current,
+          { scaleY: 0 },
+          {
+            scaleY: 1,
+            ease: "none",
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top center",
+              end: "bottom center",
+              scrub: true,
+            },
+          },
+        );
+      }
+    },
+    { scope: containerRef },
+  );
+
   return (
     <div
       id="experience"
-      className="relative z-50 py-16 lg:py-32  overflow-hidden"
+      className="relative z-50 py-16 lg:py-32 overflow-hidden"
+      ref={containerRef}
     >
-      {/* Decorative Background Blur */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="container mx-auto px-4 lg:px-8">
+        <SectionReveal direction="up">
+          <div className="mb-20 md:mb-32">
+            <div className="flex items-center gap-3 text-red-500 mb-2">
+              <span className="text-sm font-bold uppercase tracking-[0.3em]">
+                Career
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+              Professional{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">
+                Experience
+              </span>
+            </h2>
+          </div>
+        </SectionReveal>
 
-      <div className="flex justify-center mb-20 lg:mb-32">
-        <div className="flex items-center">
-          <span className="w-24 h-[2px] bg-gradient-to-r from-transparent to-red-600"></span>
-          <span className="bg-[#050505] border border-red-600/30 w-fit text-white p-3 px-8 text-2xl font-bold rounded-full shadow-[0_0_20px_rgba(220,38,38,0.2)]">
-            Professional Journey
-          </span>
-          <span className="w-24 h-[2px] bg-gradient-to-l from-transparent to-red-600"></span>
-        </div>
-      </div>
+        <div className="relative max-w-5xl mx-auto">
+          {/* Base Timeline Line */}
+          <div className="absolute left-[11px] md:left-[25%] top-0 bottom-0 w-[1px] bg-white/10 hidden md:block" />
 
-      <div className="max-w-6xl mx-auto px-4 relative">
-        {/* Central Timeline Line */}
-        <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-red-600 via-red-950 to-transparent opacity-30" />
+          {/* Animated Scroll Progress Line */}
+          <div
+            ref={lineRef}
+            className="absolute left-[11px] md:left-[25%] top-0 bottom-0 w-[1px] bg-red-600 hidden md:block origin-top"
+          />
 
-        <div className="flex flex-col gap-16 lg:gap-24">
-          {experiences.map((exp, index) => (
-            <div key={exp.id} className="relative">
-              <SectionReveal direction={index % 2 === 0 ? "right" : "left"}>
-                <div
-                  className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
-                >
-                  {/* Timeline Dot */}
-                  <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 w-10 h-10 rounded-xl bg-[#050505] border-2 border-red-600 flex items-center justify-center z-10 shadow-[0_0_15px_rgba(220,38,38,0.5)]">
-                    <BsPersonWorkspace className="text-red-600 w-5 h-5" />
-                  </div>
+          <div className="group flex flex-col gap-16 md:gap-32">
+            {experiences.map((exp) => (
+              <div
+                key={exp.id}
+                className="group/item relative grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-16 transition-opacity duration-500 hover:!opacity-100 group-hover:opacity-30"
+              >
+                {/* Timeline Dot (Lights up on hover) */}
+                <div className="hidden md:block absolute left-[25%] top-[42px] w-[9px] h-[9px] rounded-full bg-[#050505] border-2 border-white/20 -translate-x-[4px] z-10 transition-all duration-500 group-hover/item:bg-red-600 group-hover/item:border-red-600 group-hover/item:shadow-[0_0_15px_rgba(239,68,68,0.5)]" />
 
-                  {/* Date Badge (Mobile: visible, Desktop: visible) */}
-                  <div
-                    className={`w-full md:w-1/2 flex ${index % 2 === 0 ? "md:justify-end" : "md:justify-start"}`}
-                  >
-                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-full flex items-center gap-2 text-slate-400 text-sm font-medium">
-                      <Calendar className="w-4 h-4 text-red-600" />
+                {/* Left: Sticky Date */}
+                <div className="md:col-span-1">
+                  <div className="md:sticky md:top-32 pt-2 md:pt-10">
+                    <span className="text-slate-500 font-bold uppercase tracking-widest text-xs md:text-sm">
                       {exp.duration}
-                    </div>
-                  </div>
-
-                  {/* Content Card */}
-                  <div
-                    className={`w-full md:w-1/2 ${index % 2 === 0 ? "md:text-left" : "md:text-left"}`}
-                  >
-                    <div className="group relative p-8 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-md hover:border-red-600/50 transition-all duration-500 shadow-xl hover:shadow-red-600/10">
-                      <div className="flex flex-col gap-4">
-                        <div className="flex flex-col gap-1">
-                          <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
-                            {exp.title}
-                          </h3>
-                          <div className="flex items-center gap-2 text-red-500 font-semibold">
-                            <Building2 className="w-4 h-4" />
-                            {exp.company}
-                          </div>
-                        </div>
-
-                        <div className="space-y-3 mt-2">
-                          {exp.details?.map((detail, idx) => (
-                            <div
-                              key={idx}
-                              className="flex gap-3 items-start group/item"
-                            >
-                              <ChevronRight className="w-4 h-4 text-red-600 mt-1 shrink-0 group-hover/item:translate-x-1 transition-transform" />
-                              <p className="text-slate-400 text-sm lg:text-base leading-relaxed group-hover/item:text-slate-200 transition-colors">
-                                {detail}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Animated Glow Border (Hover) */}
-                      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-red-600/20 via-transparent to-red-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                    </div>
+                    </span>
                   </div>
                 </div>
-              </SectionReveal>
-            </div>
-          ))}
+
+                {/* Right: Content */}
+                <div className="md:col-span-3 pt-0 md:pt-8">
+                  <div className="flex flex-col gap-6">
+                    <div>
+                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 transition-colors duration-300 group-hover/item:text-red-50">
+                        {exp.title}
+                      </h3>
+                      <div className="flex items-center gap-2 text-red-500 font-medium">
+                        <Building2 className="w-4 h-4" />
+                        {exp.company}
+                      </div>
+                    </div>
+
+                    <ul className="space-y-4 text-slate-400 text-base md:text-lg leading-relaxed">
+                      {exp.details?.map((detail, idx) => (
+                        <li key={idx} className="relative pl-6">
+                          <span className="absolute left-0 top-3 w-1.5 h-1.5 rounded-full bg-slate-700 transition-colors duration-300 group-hover/item:bg-red-500/50" />
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

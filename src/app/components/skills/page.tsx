@@ -17,14 +17,9 @@ const SkillItem = ({ skill }: { skill: string }) => {
         >
           <Icon style={{ color: color }} />
         </div>
-        <div className="flex flex-col">
-          <span className="text-sm font-bold text-white tracking-wide uppercase group-hover:text-red-500 transition-colors">
-            {skill}
-          </span>
-          <span className="text-[10px] text-slate-500 font-medium uppercase tracking-tighter">
-            Technology
-          </span>
-        </div>
+        <span className="text-sm font-bold text-white tracking-wide uppercase group-hover:text-red-500 transition-colors">
+          {skill}
+        </span>
 
         <div
           className="absolute inset-0 opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500 pointer-events-none blur-xl"

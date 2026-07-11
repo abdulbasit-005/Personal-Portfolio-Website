@@ -177,7 +177,7 @@ const HeroSection = () => {
             <div className="hero-cta flex flex-wrap gap-4">
               <Link
                 href="/#contact"
-                className="group relative px-8 py-4 rounded-2xl bg-gradient-to-r from-red-600 to-red-900 text-white font-bold uppercase tracking-wider overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(239,68,68,0.3)]"
+                className="group relative px-6 py-3 text-sm rounded-xl bg-gradient-to-r from-red-600 to-red-900 text-white font-bold uppercase tracking-wider overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(239,68,68,0.3)]"
               >
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                 <span className="relative flex items-center gap-2">
@@ -188,7 +188,7 @@ const HeroSection = () => {
               <Link
                 href={personalData.resume}
                 target="_blank"
-                className="group px-8 py-4 rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-red-500/50 flex items-center gap-2"
+                className="group px-6 py-3 text-sm rounded-xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-red-500/50 flex items-center gap-2"
               >
                 Get Resume{" "}
                 <MdDownload className="group-hover:translate-y-1 transition-transform" />

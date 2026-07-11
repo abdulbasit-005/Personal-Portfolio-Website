@@ -8,7 +8,7 @@ import { MdAlternateEmail } from "react-icons/md";
 import { personalData } from "@/../utils/Data/PersonalData";
 import ContactWithoutCaptcha from "./contact-without-captcha";
 import SectionReveal from "../SectionReveal";
-import { MapPin, Send, MessageSquare } from "lucide-react";
+import { MapPin, Send, ArrowUpRight } from "lucide-react";
 
 interface ContactLinkProps {
   href: string;
@@ -18,41 +18,21 @@ interface ContactLinkProps {
   color: string;
 }
 
-const ContactInfoCard = ({
-  href,
-  icon: Icon,
-  label,
-  value,
-  color,
-}: ContactLinkProps) => (
+const ContactInfoCard = ({ href, label, value }: ContactLinkProps) => (
   <Link
     href={href}
     target="_blank"
-    className="group relative flex items-center gap-4 p-4 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/10 transition-all duration-300 shadow-xl"
+    className="group flex flex-col gap-2 py-6 border-b border-white/10 hover:border-red-500/50 transition-colors"
   >
-    <div
-      className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300`}
-      style={{ backgroundColor: `${color}15` }}
-    >
-      <Icon
-        className="w-6 h-6 transition-transform duration-300 group-hover:scale-110"
-        style={{ color: color }}
-      />
-    </div>
-    <div className="flex flex-col">
-      <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">
-        {label}
-      </span>
-      <span className="text-sm md:text-base text-slate-200 font-medium group-hover:text-white transition-colors">
+    <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">
+      {label}
+    </span>
+    <div className="flex items-center justify-between overflow-hidden">
+      <span className="text-lg md:text-xl text-slate-300 font-light group-hover:text-white group-hover:translate-x-2 transition-all duration-300">
         {value}
       </span>
+      <ArrowUpRight className="w-5 h-5 text-red-500 opacity-0 -translate-x-4 translate-y-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300" />
     </div>
-
-    {/* Hover Glow */}
-    <div
-      className="absolute inset-0 opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300 pointer-events-none blur-xl"
-      style={{ backgroundColor: color }}
-    />
   </Link>
 );
 

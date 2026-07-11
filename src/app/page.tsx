@@ -10,29 +10,27 @@ import "./css/card.css";
 export default function Home() {
   return (
     <>
-      <div className="container">
-        <HeroSection />
+      <HeroSection />
 
-        <SectionReveal>
-          <About />
-        </SectionReveal>
+      <SectionReveal>
+        <About />
+      </SectionReveal>
 
-        <SectionReveal>
-          <Experience />
-        </SectionReveal>
+      <SectionReveal>
+        <Experience />
+      </SectionReveal>
 
-        <SectionReveal>
-          <Skills />
-        </SectionReveal>
+      <SectionReveal>
+        <Skills />
+      </SectionReveal>
 
-        <SectionReveal>
-          <Projects />
-        </SectionReveal>
+      <SectionReveal>
+        <Projects />
+      </SectionReveal>
 
-        <SectionReveal>
-          <Contact />
-        </SectionReveal>
-      </div>
+      <SectionReveal>
+        <Contact />
+      </SectionReveal>
     </>
   );
 }

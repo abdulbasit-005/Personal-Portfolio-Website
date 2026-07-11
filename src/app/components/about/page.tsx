@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/all";
 import { SplitText } from "gsap/dist/SplitText";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
-import { User, Sparkles } from "lucide-react";
 
 function About() {
   useGSAP(() => {
@@ -112,7 +111,7 @@ function About() {
               className="about-image-card"
             >
               <div className="relative group">
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(239,68,68,0.15)] bg-[#050505]">
+                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
                   <Image
                     src={personalData.profile}
                     fill

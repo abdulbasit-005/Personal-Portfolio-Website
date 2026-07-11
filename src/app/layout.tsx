@@ -68,9 +68,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        <main className="text-white">
-          <div className="container">{children}</div>
-        </main>
+        <main className="text-white">{children}</main>
         <ScrollToTopButton />
         <Footer />
       </body>

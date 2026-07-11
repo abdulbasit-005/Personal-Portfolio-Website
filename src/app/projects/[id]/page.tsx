@@ -10,15 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import {
-  Code,
-  Globe,
-  User,
-  ShieldCheck,
-  Cpu,
-  Calendar,
-  ArrowLeft,
-} from "lucide-react";
+import { Code, Globe, User, Cpu, ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -99,7 +91,7 @@ const ProjectDetails = async ({ params }: Props) => {
               <div className="flex flex-wrap gap-4 mt-4">
                 {project.demo && (
                   <Link href={project.demo} target="_blank">
-                    <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg shadow-red-600/20 transition-all hover:scale-105 active:scale-95 flex gap-2 font-bold uppercase tracking-widest">
+                    <Button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 h-auto text-sm rounded-xl shadow-lg shadow-red-600/20 transition-all hover:scale-105 active:scale-95 flex gap-2 font-bold uppercase tracking-widest">
                       <Globe className="w-5 h-5" />
                       Live Preview
                     </Button>
@@ -109,7 +101,7 @@ const ProjectDetails = async ({ params }: Props) => {
                   <Link href={project.code} target="_blank">
                     <Button
                       variant="outline"
-                      className="border-white/10 bg-white/5 hover:bg-red-950/20 hover:text-red-500 hover:border-red-500/30 text-white px-8 py-6 text-lg rounded-xl transition-all hover:scale-105 active:scale-95 flex gap-2 font-bold uppercase tracking-widest"
+                      className="border-white/10 bg-white/5 hover:bg-red-950/20 hover:text-red-500 hover:border-red-500/30 text-white px-6 py-3 h-auto text-sm rounded-xl transition-all hover:scale-105 active:scale-95 flex gap-2 font-bold uppercase tracking-widest"
                     >
                       <Code className="w-5 h-5" />
                       View Source

@@ -98,49 +98,59 @@ export const getSkillColor = (skill: string): string => {
   const skillLower = skill.toLowerCase();
   switch (skillLower) {
     case "html":
-      return "#ef4444"; // Red-500
+      return "#E34F26";
     case "css":
-      return "#dc2626"; // Red-600
+      return "#1572B6";
     case "javascript":
-      return "#b91c1c"; // Red-700
+    case "js":
+      return "#F7DF1E";
     case "typescript":
-      return "#ef4444"; // Red-500
+    case "ts":
+      return "#3178C6";
     case "react":
-      return "#dc2626"; // Red-600
+      return "#61DAFB";
     case "next js":
     case "nextjs":
     case "next.js":
-      return "#ffffff"; // Keep white for contrast
+      return "#FFFFFF";
     case "tailwind":
-      return "#991b1b"; // Red-800
+    case "tailwindcss":
+      return "#06B6D4";
     case "node js":
     case "nodejs":
-      return "#b91c1c"; // Red-700
+    case "node.js":
+      return "#339933";
     case "mongodb":
-      return "#7f1d1d"; // Red-900
+      return "#47A248";
     case "mysql":
-      return "#991b1b"; // Red-800
+      return "#4479A1";
     case "firebase":
-      return "#ef4444"; // Red-500
+      return "#FFCA28";
     case "git":
-      return "#dc2626"; // Red-600
+      return "#F05032";
     case "figma":
-      return "#b91c1c"; // Red-700
+      return "#F24E1E";
     case "bootstrap":
-      return "#991b1b"; // Red-800
+      return "#7952B3";
     case "materialui":
     case "mui":
-      return "#ef4444"; // Red-500
+      return "#007FFF";
+    case "canva":
+      return "#00C4CC";
+    case "illustrator":
+      return "#FF9A00";
+    case "photoshop":
+      return "#31A8FF";
     case "express":
+    case "prisma":
     case "vercel":
     case "shadcn/ui":
-    case "prisma":
-      return "#ffffff";
+      return "#FFFFFF";
     case "n8n":
-      return "#ea4335";
+      return "#FF6D5A";
     case "framer":
       return "#0055FF";
     default:
-      return "#ef4444"; // Default Red
+      return "#FFFFFF"; // Default neutral
   }
 };
