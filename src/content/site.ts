@@ -11,7 +11,7 @@ export const site = {
   location: "Islamabad, Pakistan",
   profileImage: "/pic3.jpg",
   resume:
-    "https://drive.google.com/file/d/1ixh0Pb9AMlT-tvSp7qcZk2hAgZCFXmyf/view?usp=drive_link",
+    "https://drive.google.com/file/d/1nW9PSRP_nAq5R0dZ3tnVtpBQmJrISCkW/view?usp=sharing",
   url: "https://abdul-basit-portfolio-website.vercel.app",
   social: {
     github: "https://github.com/abdulbasit-005",
