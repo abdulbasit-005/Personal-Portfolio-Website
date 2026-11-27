@@ -17,7 +17,7 @@
     "@gsap/react": "^2.1.2",
     "@lottiefiles/dotlottie-react": "^0.12.3",
     "@radix-ui/react-slot": "^1.2.0",
-    "axios": "^1.7.9",
+    "axios": "^1.20.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "emailjs": "^4.0.3",
